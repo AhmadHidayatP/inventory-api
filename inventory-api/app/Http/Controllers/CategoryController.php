@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Validator;
 
 class CategoryController extends Controller
 {
-    // 6. POST /categories - Tambah kategori baru
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -24,7 +23,6 @@ class CategoryController extends Controller
         return response()->json($category, 201);
     }
 
-    // 7. GET /categories - Ambil semua kategori
     public function index()
     {
         $categories = Category::with('products')->get();

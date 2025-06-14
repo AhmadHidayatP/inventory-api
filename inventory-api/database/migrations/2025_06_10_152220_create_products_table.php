@@ -8,14 +8,13 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->id(); // auto-increment primary key
+            $table->id(); 
             $table->string('name');
             $table->decimal('price', 10, 2);
             $table->integer('stock_quantity')->default(0);
-            $table->unsignedBigInteger('category_id'); // foreign key
-            $table->timestamps(); // created_at dan updated_at
+            $table->unsignedBigInteger('category_id'); 
+            $table->timestamps(); 
 
-            // Relasi ke tabel categories
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });
     }
