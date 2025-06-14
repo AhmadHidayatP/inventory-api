@@ -1,3 +1,6 @@
+## Link Video
+https://screenrec.com/share/hKOSta6miG
+
 ## Cara Menjalankan Aplikasi
 
 1. **Clone project**
